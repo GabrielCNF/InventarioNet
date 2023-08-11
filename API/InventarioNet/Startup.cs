@@ -1,4 +1,5 @@
-﻿using InventarioNet.Models;
+﻿using InventarioNet.Controllers;
+using InventarioNet.Models;
 using InventarioNet.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -23,9 +24,13 @@ namespace InventarioNet
             });
 
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
-
             services.AddControllers();
-            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+            
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            
         }
     }
 }

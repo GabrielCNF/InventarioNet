@@ -7,7 +7,7 @@ public partial class Produto
 {
     public int ProdutoId { get; set; }
 
-    public string Nome { get; set; } = null!;
+    public string Nome { get; set; }
 
     public decimal Preco { get; set; }
 

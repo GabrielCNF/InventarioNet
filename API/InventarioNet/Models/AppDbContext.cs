@@ -69,11 +69,11 @@ namespace InventarioNet.Models
         public virtual DbSet<Usuario> Usuarios { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //if (!optionsBuilder.IsConfigured)
-            //{
-            //    optionsBuilder.UseSqlServer
-            //      ("Data Source=Macoratti;Initial Catalog=InventarioDB;Integrated Security=True");
-            //}
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer
+                  ("Data Source=DESKTOP-66T8ILU\\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False; TrustServerCertificate=true");
+            }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
